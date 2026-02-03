@@ -1,0 +1,532 @@
+/* WasteIQ - Responsive Styles */
+
+/* ============================================
+   TABLET BREAKPOINT (768px - 1024px)
+   ============================================ */
+@media screen and (max-width: 1024px) {
+    :root {
+        --sidebar-width: 240px;
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-content {
+        padding: var(--space-4);
+    }
+}
+
+/* ============================================
+   MOBILE BREAKPOINT (<768px)
+   ============================================ */
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height: 56px;
+    }
+
+    /* Hide desktop sidebar */
+    .sidebar {
+        display: none;
+    }
+
+    /* Show mobile navigation */
+    .mobile-nav {
+        display: block;
+    }
+
+    /* Adjust main content */
+    .main-content {
+        margin-left: 0;
+        padding: var(--space-4);
+        padding-bottom: calc(var(--mobile-nav-height) + var(--space-4));
+    }
+
+    /* Stack grids */
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile-specific grid */
+    .mobile-grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--text-2xl);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    h3 {
+        font-size: var(--text-lg);
+    }
+
+    /* Container padding */
+    .container {
+        padding: 0 var(--space-3);
+    }
+
+    /* Modal full width on mobile */
+    .modal {
+        max-width: 100%;
+        margin: var(--space-4);
+        border-radius: var(--radius-xl);
+    }
+
+    /* Header adjustments */
+    .header {
+        padding: 0 var(--space-4);
+    }
+
+    .header-logo .logo-text {
+        font-size: var(--text-lg);
+    }
+
+    /* Card adjustments */
+    .card-body {
+        padding: var(--space-4);
+    }
+
+    .metric-card {
+        padding: var(--space-4);
+    }
+
+    .metric-card .metric-value {
+        font-size: var(--text-2xl);
+    }
+
+    /* Table scroll */
+    .table-container {
+        margin: 0 calc(-1 * var(--space-4));
+        border-radius: 0;
+    }
+
+    /* Toast full width */
+    .toast-container {
+        left: var(--space-4);
+        right: var(--space-4);
+    }
+
+    .toast {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* ============================================
+   COLLECTOR MOBILE OPTIMIZATION
+   (Large touch targets, simplified layouts)
+   ============================================ */
+.collector-view {
+    --touch-target-min: 48px;
+}
+
+.collector-view .btn {
+    min-height: var(--touch-target-min);
+    font-size: var(--text-base);
+}
+
+.collector-view .btn-xl {
+    min-height: 64px;
+    font-size: var(--text-lg);
+    padding: var(--space-5) var(--space-6);
+}
+
+.collector-view .card-interactive {
+    min-height: 80px;
+}
+
+.collector-view .form-input {
+    min-height: var(--touch-target-min);
+    font-size: var(--text-lg);
+}
+
+.collector-view .list-item {
+    padding: var(--space-5);
+}
+
+/* Large Action Buttons for Collector */
+.collector-action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-8);
+    position: fixed;
+    bottom: var(--mobile-nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-light);
+    z-index: var(--z-sticky);
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 769px) {
+    .collector-action-buttons {
+        left: var(--sidebar-width);
+    }
+}
+
+.collector-action-buttons .btn {
+    padding: var(--space-5);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+}
+
+/* OTP Input for Collector */
+.otp-input-group {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+}
+
+.otp-input {
+    width: 56px;
+    height: 64px;
+    text-align: center;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    border: 2px solid var(--border-medium);
+    border-radius: var(--radius-lg);
+    background: var(--bg-primary);
+}
+
+.otp-input:focus {
+    border-color: var(--color-sky-500);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+    outline: none;
+}
+
+/* Collector Card - Large & Touch Friendly */
+.collector-pickup-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.collector-pickup-card:active {
+    transform: scale(0.98);
+}
+
+.collector-pickup-card .pickup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+}
+
+.collector-pickup-card .pickup-type {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.collector-pickup-card .pickup-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-sky-100);
+    color: var(--color-sky-600);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+}
+
+.collector-pickup-card .pickup-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+}
+
+.collector-pickup-card .detail-item {
+    background: var(--bg-secondary);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+}
+
+.collector-pickup-card .detail-label {
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-1);
+}
+
+.collector-pickup-card .detail-value {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+}
+
+/* Swipe Actions (Visual Indicator) */
+.swipe-indicator {
+    text-align: center;
+    padding: var(--space-2);
+    color: var(--text-tertiary);
+    font-size: var(--text-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.swipe-indicator::before,
+.swipe-indicator::after {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: var(--border-light);
+    border-radius: var(--radius-full);
+}
+
+/* ============================================
+   ADMIN DASHBOARD GRID
+   ============================================ */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-6);
+}
+
+.admin-grid .col-span-3 {
+    grid-column: span 3;
+}
+
+.admin-grid .col-span-4 {
+    grid-column: span 4;
+}
+
+.admin-grid .col-span-6 {
+    grid-column: span 6;
+}
+
+.admin-grid .col-span-8 {
+    grid-column: span 8;
+}
+
+.admin-grid .col-span-12 {
+    grid-column: span 12;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .admin-grid .col-span-3,
+    .admin-grid .col-span-4 {
+        grid-column: span 6;
+    }
+
+    .admin-grid .col-span-6,
+    .admin-grid .col-span-8 {
+        grid-column: span 12;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .admin-grid .col-span-3,
+    .admin-grid .col-span-4,
+    .admin-grid .col-span-6,
+    .admin-grid .col-span-8,
+    .admin-grid .col-span-12 {
+        grid-column: span 1;
+    }
+}
+
+/* ============================================
+   CHART CONTAINERS
+   ============================================ */
+.chart-container {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-md);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.chart-title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+}
+
+.chart-canvas {
+    width: 100%;
+    min-height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .chart-container {
+        padding: var(--space-4);
+    }
+
+    .chart-canvas {
+        min-height: 200px;
+    }
+}
+
+/* ============================================
+   HEATMAP VISUALIZATION
+   ============================================ */
+.heatmap-container {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-md);
+}
+
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.heatmap-cell {
+    aspect-ratio: 1;
+    border-radius: var(--radius-sm);
+    background: var(--color-emerald-100);
+    transition: transform var(--transition-fast);
+}
+
+.heatmap-cell:hover {
+    transform: scale(1.1);
+}
+
+.heatmap-cell.level-1 {
+    background: var(--color-emerald-100);
+}
+
+.heatmap-cell.level-2 {
+    background: var(--color-emerald-200);
+}
+
+.heatmap-cell.level-3 {
+    background: var(--color-emerald-300);
+}
+
+.heatmap-cell.level-4 {
+    background: var(--color-emerald-400);
+}
+
+.heatmap-cell.level-5 {
+    background: var(--color-emerald-500);
+}
+
+.heatmap-legend {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    font-size: var(--text-xs);
+    color: var(--text-tertiary);
+}
+
+.heatmap-legend-item {
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+
+    .sidebar,
+    .mobile-nav,
+    .btn,
+    .modal-overlay {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid var(--border-light);
+    }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE
+   ============================================ */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mobile-nav {
+        height: 56px;
+    }
+
+    .collector-action-buttons {
+        bottom: 56px;
+        padding: var(--space-2) var(--space-4);
+    }
+
+    .collector-action-buttons .btn {
+        padding: var(--space-3);
+        font-size: var(--text-base);
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST / ACCESSIBILITY
+   ============================================ */
+@media (prefers-contrast: high) {
+    :root {
+        --border-light: var(--color-slate-400);
+        --border-medium: var(--color-slate-500);
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        border: 2px solid currentColor;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   FOCUS VISIBLE STATES
+   ============================================ */
+:focus-visible {
+    outline: 2px solid var(--color-emerald-500);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.form-input:focus-visible {
+    outline: 2px solid var(--color-emerald-500);
+    outline-offset: 2px;
+}

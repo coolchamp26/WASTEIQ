@@ -1,0 +1,8 @@
+node_modules/
+.env
+.DS_Store
+*.log
+# Do not ignore database if simple deployment, but usually strictly ignored.
+# For demo simplicity on ephemeral hosts, we might include it or let it recreate.
+# We will ignore it to enforce fresh creation or volume mounting.
+# wasteiq.db
