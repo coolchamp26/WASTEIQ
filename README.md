@@ -1,76 +1,247 @@
 <div align="center">
-  <h1 align="center">🌱 WasteIQ</h1>
-  <p align="center">
-    <strong>Intelligent Waste Recovery Coordination for a sustainable future.</strong>
-  </p>
-  <p align="center">
-    <a href="#-problem-statement">Problem Statement</a> •
-    <a href="#-solution">Solution</a> •
-    <a href="#-features">Features</a> •
-    <a href="#-tech-stack">Tech Stack</a> •
-    <a href="#-getting-started">Getting Started</a>
-  </p>
+
+# 🌱 WasteIQ
+
+### Intelligent Waste Recovery Coordination Platform
+
+**Connecting Waste Producers and Collectors to build a smarter, cleaner, and greener Bharat.**
+
+WasteIQ uses intelligent matching and real-time coordination to transform waste into recoverable resources and reduce landfill overflow.
+
 </div>
 
-## 📌 Problem Statement
-Inefficient waste management leads to overflow, pollution, and missed opportunities for recycling and recovery. The lack of coordination between waste producers (households, businesses) and collectors exacerbates this issue, leading to environmental hazards and loss of valuable recyclable materials.
+---
 
-## 💡 Solution
-**WasteIQ** bridges the gap between waste generators and collectors with an intelligent matching system. By optimizing pickup jobs and managing waste categories efficiently, we make waste recovery scalable, rewarding, and sustainable for smart cities and local communities.
+# 📌 Problem Statement
 
-## ✨ Features
-- **Role-Based Workflows:** Distinct dashboard environments for Producers, Collectors, and Admins.
-- **Real-Time Job Board:** Pickups listed by producers become instantly available on the collector's dashboard.
-- **Analytics & Eco-Metrics:** Track waste diverted, active pickups, and overall environmental impact (e.g., CO2 saved) directly on the dashboard.
-- **Interactive UI:** A highly responsive design leveraging CSS modularity and modern frontend practices.
-- **Scalable Backend:** Clean RESTful API built with Node.js, Express.js, and a robust PostgreSQL database.
+Rapid urbanization has led to **inefficient waste management systems**, resulting in:
 
-## 🛠 Tech Stack
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript, Chart.js
-- **Backend:** Node.js, Express.js
-- **Database:** PostgreSQL (pg library)
+* Overflowing landfills
+* Poor waste segregation
+* Missed recycling opportunities
+* Increased environmental pollution
 
-## 🚀 Getting Started
+Currently, **waste producers (households, businesses)** and **waste collectors** operate with little coordination, making waste recovery inefficient and unsustainable.
 
-### Prerequisites
-- Node.js (v14 or higher)
-- PostgreSQL (v12 or higher)
+Without better coordination, valuable recyclable materials are lost and environmental damage increases.
 
-### Installation Guide
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/wasteiq.git
-   cd wasteiq
-   ```
+# 💡 Our Solution
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+**WasteIQ** is an intelligent platform that bridges the gap between **waste generators** and **waste collectors** through a smart coordination system.
 
-3. **Configure Environment Variables:**
-   Create a `.env` file in the root directory and add:
-   ```env
-   PORT=3000
-   DATABASE_URL=postgres://user:password@localhost:5432/wasteiq
-   ```
-   *(Update the connection string with your actual local PostgreSQL credentials).*
+The platform enables:
 
-4. **Initialize Database:**
-   Ensure your PostgreSQL instance is running and the database `wasteiq` is created. The app runs bootstrapping logic via `database.js` to set up schemas if they do not exist.
+* Real-time waste pickup requests
+* Intelligent matching between producers and collectors
+* Waste category tracking for better recycling
+* Environmental impact analytics
 
-5. **Start the Application:**
-   ```bash
-   npm start
-   ```
-   Access the web app at `http://localhost:3000`.
+By digitizing waste recovery logistics, WasteIQ helps cities move toward **sustainable circular waste management.**
 
-## 🖥️ Demo
-*(Insert a link to a live demo or your YouTube hackathon submission video here).*
+---
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are always welcome! Feel free to check the issues page before diving in. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and development process.
+# ✨ Key Features
 
-## 📜 License
-This project is [MIT](LICENSE) licensed.
+## 👥 Role-Based Dashboards
+
+Different user environments tailored for:
+
+* **Producers** – create waste pickup requests
+* **Collectors** – browse and accept pickup jobs
+* **Admins** – monitor activity and environmental impact
+
+---
+
+## 📋 Real-Time Pickup Job Board
+
+Waste producers can post pickup jobs that instantly appear on the collector dashboard.
+
+Collectors can:
+
+* View waste details
+* Accept jobs
+* Track pickups
+
+---
+
+## 📊 Sustainability Analytics
+
+Interactive dashboards provide insights such as:
+
+* Waste diverted from landfills
+* Active pickups
+* Recycling categories
+* Estimated CO₂ emissions reduced
+
+Charts and visualizations are powered by **Chart.js**.
+
+---
+
+## ⚡ Responsive & Interactive UI
+
+The platform features a modern interface built with:
+
+* Modular CSS
+* Dynamic UI updates
+* Fast client-side rendering
+
+Designed for usability across **desktop and mobile devices**.
+
+---
+
+## 🧠 Intelligent Coordination System
+
+WasteIQ optimizes waste pickup and recovery by intelligently matching:
+
+* Waste type
+* Collector availability
+* Pickup location
+
+This improves efficiency while maximizing recycling opportunities.
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+* HTML5
+* CSS3
+* Vanilla JavaScript
+* Chart.js (data visualization)
+
+## Backend
+
+* Node.js
+* Express.js
+* RESTful API architecture
+
+## Database
+
+* PostgreSQL
+* pg library for database interaction
+
+---
+
+# 🏗 System Architecture
+
+```
+User Interface (HTML / CSS / JS)
+        ↓
+REST API (Node.js + Express)
+        ↓
+Application Logic
+        ↓
+PostgreSQL Database
+        ↓
+Analytics & Metrics
+```
+
+---
+
+# 🌍 Sustainability Impact
+
+WasteIQ contributes to environmental sustainability by:
+
+* Reducing landfill waste
+* Encouraging recycling and recovery
+* Improving waste logistics efficiency
+* Increasing transparency in waste collection systems
+
+Example impact metrics tracked:
+
+* ♻ Waste recovered
+* 🌱 CO₂ emissions avoided
+* 🚛 Pickup efficiency
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+* Node.js (v14 or higher)
+* PostgreSQL (v12 or higher)
+* npm
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/wasteiq.git
+cd wasteiq
+```
+
+---
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3. Configure environment variables
+
+Create a `.env` file in the root directory.
+
+```
+PORT=3000
+DATABASE_URL=postgres://user:password@localhost:5432/wasteiq
+```
+
+Replace credentials with your local PostgreSQL configuration.
+
+---
+
+### 4. Initialize database
+
+Ensure PostgreSQL is running and create the database:
+
+```
+wasteiq
+```
+
+The application automatically initializes schemas via `database.js`.
+
+---
+
+### 5. Start the server
+
+```
+npm start
+```
+
+Open the application at:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🔮 Future Improvements
+
+Possible enhancements include:
+
+* AI-based waste classification from images
+* Route optimization for collectors
+* Smart bin integration with IoT sensors
+* Mobile application for real-time pickups
+* Reward system for sustainable behavior
+
+---
+
+<div align="center">
+
+### 🌱 Building technology for a cleaner and greener future.
+
+</div>
