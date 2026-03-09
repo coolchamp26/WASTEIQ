@@ -2,6 +2,8 @@
 
 # 🌱 WasteIQ
 
+### NOTE: JUST A DEMO TO DEMONSTRATE OUR IDEA AND VISION (NOT COMPLETE)
+
 ### Intelligent Waste Recovery Coordination Platform
 
 **Connecting Waste Producers and Collectors to build a smarter, cleaner, and greener Bharat.**
